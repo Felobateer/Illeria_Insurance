@@ -44,7 +44,7 @@ export default function Navbar() {
                     <li className={styles.navbar.link}>
                         <a href="#" className={styles.navbar.link}>Contact
                             </a></li>
-                    <li className={styles.navbar.link}>
+                    <li>
                         <DropdownButton label={"Services"} options={services} onSelect={() => handleSelect(option)} />
                     </li>
                     <button className={styles.navbar.button}>
