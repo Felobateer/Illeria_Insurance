@@ -1,13 +1,13 @@
 const styles = {
     navbar: {
-      container: 'w-full flex justify-between items-center leading-normal py-4 px-12 border-b border-gray-300',
-      logo: 'text-gray-700 text-xl font-bold',
+      container: 'fixed w-full max-w-[1440px] bg-white flex justify-between items-center leading-normal py-4 px-12 border-b border-blue-300 z-100',
+      logo: 'text-blue-700 text-xl font-bold',
       navLinks: 'flex space-x-4',
       link: 'text-md mt-2 px-1 font-normal text-gray-700 hover:text-gray-400 transition duration-300 ease-in-out',
-      button: "bg-gray-800 text-gray-50 px-4 py-2 rounded-md hover:bg-gray-700 transition duration-300 ease-in-out",
+      button: "bg-blue-800 text-gray-50 px-4 py-2 rounded-md hover:bg-blue-700 transition duration-300 ease-in-out",
     },
     footer: {
-        container: 'w-full bg-gray-800 p-4 border-t border-gray-300',
+        container: 'w-full bg-blue-800 p-4 border-t border-blue-300',
         content: 'flex justify-between items-center',
         text: 'text-gray-100 text-sm',
         socialIcons: 'flex flex-col space-x-4',
@@ -22,7 +22,7 @@ const styles = {
         arrow: 'ml-2',
     },
     hero: {
-        container: 'relative flex flex-col items-center justify-center h-fit bg-gray-100',
+        container: 'relative mt-[73px] flex flex-col items-center justify-center h-fit bg-gray-100',
         shade: 'w-full h-full absolute inset-0 bg-black opacity-20',
         subcontainer: 'absolute z-10 w-fit flex flex-col items-center justify-center w-full max-w-2xl mx-auto text-center px-8 rounded-lg shadow-lg',
         subshade: 'w-full h-full absolute inset-0 bg-gradient-to-r from-gray-200 via-gray-800 to-gray-200 opacity-50 z-1 rounded-lg',
@@ -37,15 +37,15 @@ const styles = {
     },
     service: {
         container: 'w-full bg-white p-8',
-        title: 'text-3xl font-bold text-center text-gray-800 mb-8',
+        title: 'text-3xl font-bold text-center text-blue-800 mb-8',
         flex: 'flex flex-wrap justify-center items-center space-x-4',
         card: 'bg-white shadow-lg rounded-lg p-6 m-4 w-[300px] h-[200px] flex flex-col',
-        cardTitle: 'text-xl font-semibold text-gray-800',
+        cardTitle: 'text-xl font-semibold text-blue-800',
         cardDescription: 'text-gray-600 mt-2 items-start',
     },
     about: {
         container: 'w-full bg-gray-100 p-8',
-        title: 'text-3xl font-bold text-center text-gray-800 mb-8',
+        title: 'text-3xl font-bold text-center text-blue-800 mb-8',
         subcontainer: 'flex flex-col md:flex-row items-center justify-center space-x-4',
         img: 'w-full h-[340px] object-center object-cover rounded-lg shadow-lg',
         content: 'flex flex-col items-start justify-start w-full max-w-2xl mx-auto text-left p-8 rounded-lg shadow-lg',
@@ -59,6 +59,29 @@ const styles = {
         content: 'flex flex-col items-start justify-start w-full max-w-2xl mx-auto text-left p-8 rounded-lg shadow-lg',
         description: 'mt-4 text-lg text-gray-600',
         highlight: 'text-blue-800 font-bold',
+    },
+    contact: {
+        container: 'w-full bg-gray-100 p-8',
+        title: 'text-3xl font-bold text-center text-blue-800 mb-8',
+        subcontainer: 'flex flex-row items-center justify-between space-x-4 px-20',
+        leftside: 'flex flex-col w-full max-w-md mx-auto',
+        rightside: 'flex flex-col w-full max-w-md mx-auto',
+        subtitle: 'text-2xl text-center font-bold text-blue-800 mb-4',
+        text: 'text-lg text-center text-gray-600 mb-2',
+        description: 'mt-4 text-lg text-gray-600',
+        button: 'mt-4 bg-blue-800 w-[260px] text-white px-4 py-2 rounded-md hover:bg-gray-700 transition duration-300 ease-in-out',
+        img: 'w-[550px] h-[540px] object-left object-cover rounded-lg shadow-lg',
+    },
+    form: {
+        container: 'w-full p-8',
+        title: 'text-3xl font-bold text-center text-blue-800 mb-8',
+        subcontainer: 'flex flex-col md:flex-col items-center justify-center space-x-4',
+        leftside: 'flex flex-col w-full max-w-md mx-auto',
+        rightside: 'flex flex-col w-full max-w-md mx-auto',
+        input: 'border border-gray-300 rounded-md p-2 mb-4',
+        textarea: 'border border-gray-300 rounded-md p-2 mb-4 h-[200px]',
+        button: 'bg-blue-800 text-white px-4 py-2 rounded-md hover:bg-gray-700 transition duration-300 ease-in-out',
+        description: 'mt-4 text-lg text-green-600',
     }
   }
   
