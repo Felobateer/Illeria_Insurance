@@ -52,7 +52,7 @@ const styles = {
         description: 'mt-4 text-lg text-gray-600',
     },
     aboutme: {
-        container: 'w-full bg-white p-8',
+        container: 'w-full my-20 bg-white p-8',
         title: 'text-3xl font-bold text-center text-gray-800 mb-8',
         subcontainer: 'flex flex-col md:flex-row items-center justify-center space-x-4',
         img: 'w-[400px] h-auto object-center object-cover rounded-lg shadow-lg',
@@ -77,11 +77,31 @@ const styles = {
         title: 'text-3xl font-bold text-center text-blue-800 mb-8',
         subcontainer: 'flex flex-col md:flex-col items-center justify-center space-x-4',
         leftside: 'flex flex-col w-full max-w-md mx-auto',
-        rightside: 'flex flex-col w-full max-w-md mx-auto',
+        rightside: 'mt-5 flex flex-col w-full max-w-md mx-auto',
         input: 'border border-gray-300 rounded-md p-2 mb-4',
         textarea: 'border border-gray-300 rounded-md p-2 mb-4 h-[200px]',
         button: 'bg-blue-800 text-white px-4 py-2 rounded-md hover:bg-gray-700 transition duration-300 ease-in-out',
         description: 'mt-4 text-lg text-green-600',
+    },
+    insurers: {
+        container: 'w-full mt-20 bg-white p-8 overflow-x-hidden',
+        subcontainer: 'w-5/6 mx-auto overflow-x-hidden',
+        title: 'text-3xl font-bold text-center text-blue-800 mb-8',
+        header: 'flex flex-col items-center justify-center space-x-4',
+        content: 'flex flex-col items-start justify-start w-full max-w-2xl mx-auto text-left p-8 rounded-lg shadow-lg',
+        question: 'mt-4 text-lg text-gray-600',
+        answer: 'mt-2 text-md text-gray-500',
+        description: 'mt-4 text-lg text-gray-600',
+        carousel: 'w-5/6 mx-auto flex justify-center items-center space-x-4',
+        img: 'w-auto h-[200px] object-center object-cover rounded-lg shadow-lg',
+        card: 'w-fit h-fit',
+    },
+    joinUs: {
+        container: 'w-full bg-white p-8',
+        title: 'text-3xl font-bold text-center text-blue-800 mb-8',
+        subcontainer: 'flex flex-col md:flex-row items-center justify-center space-x-4',
+        content: 'flex flex-col items-start justify-start w-full max-w-2xl mx-auto text-left p-8 rounded-lg shadow-lg',
+        description: 'mt-4 text-lg text-center text-gray-600',
     }
   }
   

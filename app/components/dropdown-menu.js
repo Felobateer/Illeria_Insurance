@@ -11,7 +11,8 @@ const DropdownMenu = ({ list }) => {
         { id: 3, name: 'Option 3' },
     ];
 
-    const toggleMenu = () => {
+    const toggleMenu = (e) => {
+        e.preventDefault();
         setIsOpen(!isOpen);
     };
 
