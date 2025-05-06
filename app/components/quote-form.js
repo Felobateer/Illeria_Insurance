@@ -1,5 +1,10 @@
 import styles from "../styles";
 import DropdownMenu from "./dropdown-menu";
+import LifeInsuranceForm from "./life-insurance";
+import HealthInsuranceForm from "./health-insurance";
+import FinalExpenseInsuranceForm from "./final-expense";
+import MedicareSupplementForm from "./medicare-supplement";
+import FastAutoInsuranceForm from "./fast-auto-insurance";
 
 export default function QuoteForm() {
 
