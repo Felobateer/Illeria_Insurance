@@ -12,6 +12,10 @@ const styles = {
         text: 'text-gray-100 text-sm',
         socialIcons: 'flex flex-row space-x-4',
         icon: 'text-gray-100 hover:text-gray-400 transition duration-300 ease-in-out',
+        policyContent: 'p-6 h-[450px] flex flex-col justify-center overflow-y-auto',
+        title: 'text-3xl font-bold text-center text-blue-800 mb-8',
+        description: 'mt-4 text-md text-start text-gray-600',
+        button: "bg-blue-800 text-gray-50 px-4 py-2 rounded-md hover:bg-blue-700 transition duration-300 ease-in-out",
     },
     dropdown: {
         container: 'relative inline-block text-left',
@@ -102,6 +106,10 @@ const styles = {
         subcontainer: 'flex flex-col md:flex-row items-center justify-center space-x-4',
         content: 'flex flex-col items-start justify-start w-full max-w-2xl mx-auto text-left p-8 rounded-lg shadow-lg',
         description: 'mt-4 text-lg text-center text-gray-600',
+    },
+    modal: {
+        backdrop: "fixed inset-0 bg-black/50 flex items-center justify-center z-50 ",
+        container: "bg-white rounded-2xl shadow-xl p-6 w-full max-w-lg"
     }
   }
   
