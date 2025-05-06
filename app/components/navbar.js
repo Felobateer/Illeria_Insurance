@@ -2,12 +2,14 @@
 import styles from "../styles"
 import DropdownButton from "./dropdown-btn"
 import { useRouter } from "next/navigation"
-import { useEffect } from "react"
+import { useEffect, useState } from "react"
 import DropdownMenu from "./dropdown-menu";
+import CustomModal from "./modal";
 
 
 export default function Navbar() {
     const navigate = useRouter();
+    const [showQuotes, setShowQuotes] = useState(false);
 
 
     const services = [
@@ -47,11 +49,15 @@ export default function Navbar() {
                     <li>
                         <DropdownButton label={"Services"} options={services} onSelect={() => handleSelect(option)} />
                     </li>
-                    <button className={styles.navbar.button}>
+                    <button className={styles.navbar.button} onClick={() => setShowQuotes(!showQuotes)}>
                         Free Quotes
                     </button>
                     <DropdownMenu list={lang} />
                 </ul>
+
+                <CustomModal show={showQuotes} onClose={() => setShowQuotes(false)}>
+
+                </CustomModal>
         </nav>
     )
 }
