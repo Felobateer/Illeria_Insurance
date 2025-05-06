@@ -10,7 +10,7 @@ const styles = {
         container: 'w-full bg-blue-800 p-4 border-t border-blue-300',
         content: 'flex justify-between items-center',
         text: 'text-gray-100 text-sm',
-        socialIcons: 'flex flex-col space-x-4',
+        socialIcons: 'flex flex-row space-x-4',
         icon: 'text-gray-100 hover:text-gray-400 transition duration-300 ease-in-out',
     },
     dropdown: {
