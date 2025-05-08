@@ -1,4 +1,7 @@
 const styles = {
+    main: {
+        container: 'relative flex flex-col min-h-screen bg-red-100',
+    },
     navbar: {
       container: 'fixed w-full max-w-[1440px] bg-white flex justify-between items-center leading-normal py-4 px-12 border-b border-blue-300 z-100',
       logo: 'text-blue-700 text-xl font-bold',
@@ -12,9 +15,9 @@ const styles = {
         text: 'text-gray-100 text-sm',
         socialIcons: 'flex flex-row space-x-4',
         icon: 'text-gray-100 hover:text-gray-400 transition duration-300 ease-in-out',
-        policyContent: 'p-6 h-[450px] flex flex-col justify-center overflow-y-auto',
+        policyContent: 'mt-[73px] px-40 flex flex-col flex-1 justify-center overflow-y-auto',
         title: 'text-3xl font-bold text-center text-blue-800 mb-8',
-        description: 'mt-4 text-md text-start text-gray-600',
+        description: 'mt-4 text-lg text-start text-gray-600 leading-7',
         button: "bg-blue-800 text-gray-50 px-4 py-2 rounded-md hover:bg-blue-700 transition duration-300 ease-in-out",
     },
     dropdown: {
