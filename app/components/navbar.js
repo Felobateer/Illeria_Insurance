@@ -13,10 +13,10 @@ export default function Navbar() {
 
 
     const services = [
-        { id: 0, name: "Medicare Plan", link: "/service/mdc-plan" },
-        { id: 1, name: "Support Securing", link: "/service/support-securing" },
-        { id: 2, name: "Guidance Navigating", link: "/service/guidance-navigating" },
-        { id: 3, name: "In-Network Provider", link: "/service/in-network-provider" },
+        { id: 0, name: "Medicare Plan", link: "/service#mdc-plan" },
+        { id: 1, name: "Support Securing", link: "/service#support-securing" },
+        { id: 2, name: "Guidance Navigating", link: "/service#guidance-navigating" },
+        { id: 3, name: "In-Network Provider", link: "/service#in-network-provider" },
     ];
 
     const lang = [
@@ -37,18 +37,21 @@ export default function Navbar() {
         <nav className={styles.navbar.container}>
                 <div className={styles.navbar.logo}>Illeria Insurance</div>
                 <ul className={styles.navbar.navLinks}>
-                    <li className={styles.navbar.link}>
-                        <a href="#" className={styles.navbar.link}>Home
-                            </a></li>
-                    <li className={styles.navbar.link}>
-                        <a href="#" className={styles.navbar.link}>About
-                            </a></li>
-                    <li className={styles.navbar.link}>
-                        <a href="#" className={styles.navbar.link}>Contact
-                            </a></li>
-                    <li>
+                    <li className={styles.dropdown.container}>
+                        <button onClick={() => navigate.push('/')} className={styles.dropdown.button}>Home
+                            </button></li>
+                    <li className={styles.dropdown.container}>
+                        <button onClick={() => navigate.push('/#about')} className={styles.dropdown.button}>About
+                            </button></li>
+                    <li className={styles.dropdown.container}>
+                        <button onClick={() => navigate.push('/#contact')} className={styles.dropdown.button}>Contact
+                            </button></li>
+                            <li className={styles.dropdown.container}>
+                        <button onClick={() => navigate.push('/service')} className={styles.dropdown.button}>Services
+                            </button></li>
+                    {/* <li>
                         <DropdownButton label={"Services"} options={services} onSelect={() => handleSelect(option)} />
-                    </li>
+                    </li> */}
                     <button className={styles.navbar.button} onClick={() => setShowQuotes(!showQuotes)}>
                         Free Quotes
                     </button>
