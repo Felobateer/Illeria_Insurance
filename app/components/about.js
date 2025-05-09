@@ -2,7 +2,7 @@ import styles from "../styles";
 
 export default function About() {
     return (
-        <article>
+        <article id="about">
         <section className={styles.about.container}>
             <h2 className={styles.about.title}> Why Choose Illareia Insurance? </h2>
             <div className={styles.about.subcontainer}>

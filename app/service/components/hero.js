@@ -5,7 +5,7 @@ export default function HeroSection() {
         <section className={styles.hero.container}>
         <img src='/service-hero.jpg' alt="Hero Image" className={styles.hero.img} />
         <div className={styles.hero.shade}></div>
-        <div className={styles.hero.subcontainer}>
+        <div className={styles.card.subcontainer}>
           {/* <div className={styles.hero.subshade}></div>
           <div className={styles.hero.content}> */}
           <h1 className={styles.hero.title}>Competition = Lower Costs</h1>

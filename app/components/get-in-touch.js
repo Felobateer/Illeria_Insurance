@@ -3,7 +3,7 @@ import ContactForm from "./contact-form";
 
 export default function GetInTouch() {
     return (
-        <section className={styles.contact.container}>
+        <section className={styles.contact.container} id="contact">
                 <h1 className={styles.contact.title}>Get In Touch</h1>
             <div className={styles.contact.subcontainer}>
                 <div className={styles.contact.leftside}>

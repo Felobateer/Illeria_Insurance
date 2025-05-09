@@ -33,7 +33,7 @@ const styles = {
         shade: 'w-full h-full absolute inset-0 bg-black opacity-20',
         subcontainer: 'absolute z-10 w-fit flex flex-col items-center justify-center w-full max-w-2xl mx-auto text-center px-8 rounded-lg shadow-lg',
         subshade: 'w-full h-full absolute inset-0 bg-gradient-to-r from-gray-200 via-gray-800 to-gray-200 opacity-50 z-1 rounded-lg',
-        content: 'relative z-10 flex flex-col items-center justify-center w-full max-w-2xl mx-auto text-center p-8 rounded-lg shadow-lg',
+        content: 'relative z-10 flex flex-col items-center justify-center w-full max-w-2xl mx-auto text-center p-8 rounded-lg',
         title: 'text-4xl font-bold text-gray-100',
         img: 'w-full h-[540px] object-center object-cover z--1',
         description: 'mt-4 text-lg text-gray-200',
@@ -49,6 +49,7 @@ const styles = {
         card: 'bg-white shadow-lg rounded-lg p-6 m-4 w-[300px] h-[200px] flex flex-col',
         cardTitle: 'text-xl font-semibold text-blue-800',
         cardDescription: 'text-gray-600 mt-2 items-start',
+        hoverEffect: 'hover:shadow-blue-400 transition duration-300 ease-in-out',
     },
     about: {
         container: 'w-full bg-gray-100 p-8',
@@ -123,6 +124,7 @@ const styles = {
         content: 'max-w-[500px]',
         title: 'text-3xl font-bold text-start text-blue-800 mb-8',
         description: 'mt-4 text-lg text-gray-800',
+        subcontainer: 'absolute z-10 w-fit flex flex-col items-center justify-center w-full max-w-2xl mx-auto text-center px-8 rounded-lg',
     }
   }
   
