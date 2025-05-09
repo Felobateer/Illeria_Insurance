@@ -113,6 +113,16 @@ const styles = {
     modal: {
         backdrop: "fixed inset-0 bg-black/50 flex items-center justify-center z-50 ",
         container: "bg-white rounded-2xl shadow-xl p-6 w-full max-w-lg"
+    },
+    card: {
+        container: 'w-full p-20 flex justify-between items-center px-40',
+        flexRow: 'flex-row',
+        flexRowReverse: 'flex-row-reverse',
+        imageContainer: 'flex items-center',
+        image: 'h-[200px] w-fit object-center object-cover rounded-lg shadow-lg',
+        content: 'max-w-[500px]',
+        title: 'text-3xl font-bold text-start text-blue-800 mb-8',
+        description: 'mt-4 text-lg text-gray-800',
     }
   }
   
