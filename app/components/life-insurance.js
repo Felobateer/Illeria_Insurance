@@ -51,6 +51,7 @@ export default function LifeInsuranceForm() {
         }
         return yearList;
     }
+
     const days = () => {
         const currentYear = new Date().getFullYear();
         const month = new Date().getMonth();
@@ -116,8 +117,11 @@ export default function LifeInsuranceForm() {
         { id: 34, name: "$9 Million" },
         { id: 35, name: "$10 Million" }
     ];
+
     return (
         <form className={styles.quoteForm.container}>
+            <input type="text" placeholder="Full Name" className={styles.quoteForm.input} />
+            <input type="email" placeholder="Email" className={styles.quoteForm.input} />
             <div className={styles.quoteForm.inputGroup}>
                 <label className={styles.quoteForm.label}>State:</label>
                 <DropdownButton list={statesList} />
