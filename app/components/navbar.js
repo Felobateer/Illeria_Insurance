@@ -5,19 +5,12 @@ import { useRouter } from "next/navigation"
 import { useEffect, useState } from "react"
 import DropdownMenu from "./dropdown-menu";
 import CustomModal from "./modal";
+import QuoteForm from "./quote-form";
 
 
 export default function Navbar() {
     const navigate = useRouter();
     const [showQuotes, setShowQuotes] = useState(false);
-
-
-    const services = [
-        { id: 0, name: "Medicare Plan", link: "/service#mdc-plan" },
-        { id: 1, name: "Support Securing", link: "/service#support-securing" },
-        { id: 2, name: "Guidance Navigating", link: "/service#guidance-navigating" },
-        { id: 3, name: "In-Network Provider", link: "/service#in-network-provider" },
-    ];
 
     const lang = [
         {id: 0, name: 'EN'},
@@ -28,10 +21,6 @@ export default function Navbar() {
         {id: 5, name: 'GU'},
         {id: 6, name: 'PA'},
     ]
-
-    const handleSelect = (option) => {
-        navigate.push(option.link);
-    }
 
     return (
         <nav className={styles.navbar.container}>
@@ -46,20 +35,18 @@ export default function Navbar() {
                     <li className={styles.dropdown.container}>
                         <button onClick={() => navigate.push('/#contact')} className={styles.dropdown.button}>Contact
                             </button></li>
-                            <li className={styles.dropdown.container}>
+                    <li className={styles.dropdown.container}>
                         <button onClick={() => navigate.push('/service')} className={styles.dropdown.button}>Services
                             </button></li>
-                    {/* <li>
-                        <DropdownButton label={"Services"} options={services} onSelect={() => handleSelect(option)} />
-                    </li> */}
-                    <button className={styles.navbar.button} onClick={() => setShowQuotes(!showQuotes)}>
-                        Free Quotes
-                    </button>
+                    <li className={styles.dropdown.container}>
+                        <button className={styles.navbar.button} onClick={() => {setShowQuotes(!showQuotes); console.log(showQuotes)}}>
+                            Free Quotes
+                        </button></li>
                     <DropdownMenu list={lang} />
                 </ul>
 
-                <CustomModal show={showQuotes} onClose={() => setShowQuotes(false)}>
-
+                <CustomModal isOpen={showQuotes} onClose={() => setShowQuotes(false)}>
+                        <QuoteForm />
                 </CustomModal>
         </nav>
     )

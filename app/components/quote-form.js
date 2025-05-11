@@ -5,38 +5,36 @@ import HealthInsuranceForm from "./health-insurance";
 import FinalExpenseInsuranceForm from "./final-expense";
 import MedicareSupplementForm from "./medicare-form";
 import FastAutoInsuranceForm from "./auto-insurance";
+import { useEffect, useState } from "react";
+import { quotes } from "../constants";
 
 export default function QuoteForm() {
+    
 
-    const quotes = [
-        { id: 0, name: "Life Insurance"},
-        { id: 1, name: "Health Insurance" },
-        { id: 2, name: "Final Expense Insurance" },
-        { id: 3, name: "Medicare Supplement"},
-        { id: 4, name: "Fast Auto Insurance"}
-    ]
+    const [selectedOption, setSelectedOption] = useState(0);
 
-    const selectedForm = (option) => {
-        switch (option) {
-            case option === quotes[0].name:
-                return <LifeInsuranceForm />
-            case option === quotes[1].name:
-                return <HealthInsuranceForm />
-            case option === quotes[2].name:
-                return <FinalExpenseInsuranceForm />
-            case option === quotes[3].name:
-                return <MedicareSupplementForm />
-            case option === quotes[4].name:
-                return <FastAutoInsuranceForm />
+    const renderForm = () => {
+        switch (selectedOption) {
+            case 0:
+                return <LifeInsuranceForm />;
+            case 1:
+                return <HealthInsuranceForm />;
+            case 2:
+                return <FinalExpenseInsuranceForm />;
+            case 3:
+                return <MedicareSupplementForm />;
+            case 4:
+                return <FastAutoInsuranceForm />;
             default:
                 return null;
         }
-    }
+    };
+
 
     return (
-        <form className={styles.quoteForm.container}>
-            <DropdownMenu list={quotes} />
-            {selectedForm(DropdownMenu.selectedOption)}
-        </form>
+        <div className={styles.quoteForm.container}>
+            <DropdownMenu list={quotes} onSelect={setSelectedOption} />
+            {renderForm()}
+        </div>
     );
 }

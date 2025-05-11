@@ -23,7 +23,7 @@ const styles = {
     dropdown: {
         container: 'relative inline-block text-left',
         button: 'inline-flex justify-center mt-2 w-full rounded-md border border-none px-1  bg-white text-md font-medium text-gray-700 hover:text-gray-400 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500',
-        menu: 'absolute right-0 z-10 mt-2 w-48 rounded-md shadow-lg bg-white ring-1 ring-black ring-opacity-5 focus:outline-none',
+        menu: 'absolute right-0 z-10 mt-2 w-48 rounded-md shadow-lg bg-white ring-1 ring-black ring-opacity-5 focus:outline-none max-h-60 overflow-y-auto',
         item: 'block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100',
         itembtn: 'block w-full text-sm text-start text-gray-700 hover:bg-gray-100',
         arrow: 'ml-2',
@@ -114,6 +114,16 @@ const styles = {
     modal: {
         backdrop: "fixed inset-0 bg-black/50 flex items-center justify-center z-50 ",
         container: "bg-white rounded-2xl shadow-xl p-6 w-full max-w-lg"
+    },
+    quoteForm: {
+        container: 'w-full p-8',
+        title: 'text-3xl font-bold text-center text-blue-800 mb-8',
+        subcontainer: 'flex flex-col md:flex-row items-center justify-center space-x-4',
+        inputGroup: 'flex flex-row w-full max-w-md mx-auto justify-between',
+        input: 'border border-gray-300 rounded-md p-2 mb-4',
+        textarea: 'border border-gray-300 rounded-md p-2 mb-4 h-[200px]',
+        button: 'bg-blue-800 text-white px-4 py-2 rounded-md hover:bg-gray-700 transition duration-300 ease-in-out',
+        description: 'mt-4 text-lg text-green-600',
     },
     card: {
         container: 'w-full p-20 flex justify-between items-center px-40',

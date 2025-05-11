@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import styles from '../styles';
 
-const DropdownMenu = ({ list }) => {
+const DropdownMenu = ({ list, onSelect }) => {
     const [isOpen, setIsOpen] = useState(false);
     const [selectedOption, setSelectedOption] = useState(null);
 
@@ -19,19 +19,20 @@ const DropdownMenu = ({ list }) => {
     const handleSelect = (option) => {
         setSelectedOption(option);
         setIsOpen(false); 
+        onselect?.(option);
     }
 
     return (
         <div className={styles.dropdown.container}>
             <button onClick={toggleMenu} className={styles.dropdown.button}>
-                {selectedOption || options[0].name} <span className={styles.dropdown.arrow}>{isOpen ? '▲' : '▼'}</span>
+                {options[selectedOption]?.name || options[0].name} <span className={styles.dropdown.arrow}>{isOpen ? '▲' : '▼'}</span>
             </button>
             {isOpen && (
                 <ul className={styles.dropdown.menu}>
                     {options.map((item) => (
                         <li key={item.id} className={styles.dropdown.item}>
                             
-                            <button onClick={() => handleSelect(item.name)} className={styles.dropdown.itembtn}> 
+                            <button onClick={() => handleSelect(item.id)} className={styles.dropdown.itembtn}> 
                                 {item.name}
                             </button>
                         </li>
