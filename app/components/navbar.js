@@ -24,7 +24,10 @@ export default function Navbar() {
 
     return (
         <nav className={styles.navbar.container}>
-                <div className={styles.navbar.logo}>Illeria Insurance</div>
+                <div className={styles.navbar.logo}>
+                    <img src="/logo.jpg" alt="Logo" className={styles.navbar.logoImg} />
+                    <p className={styles.navbar.logoText}>Lighthouse Financial Services</p>
+                </div>
                 <ul className={styles.navbar.navLinks}>
                     <li className={styles.dropdown.container}>
                         <button onClick={() => navigate.push('/')} className={styles.dropdown.button}>Home

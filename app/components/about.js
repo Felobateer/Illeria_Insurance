@@ -4,7 +4,7 @@ export default function About() {
     return (
         <article id="about">
         <section className={styles.about.container}>
-            <h2 className={styles.about.title}> Why Choose Illareia Insurance? </h2>
+            <h2 className={styles.about.title}> Why Choose Lighthouse Financial Services? </h2>
             <div className={styles.about.subcontainer}>
             <img src='/about.png' alt="About Us Image" className={styles.about.img} />
                     <p className={styles.about.description}>

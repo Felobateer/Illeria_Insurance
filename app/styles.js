@@ -4,10 +4,12 @@ const styles = {
     },
     navbar: {
       container: 'fixed w-full max-w-[1440px] bg-white flex justify-between items-center leading-normal py-4 px-12 border-b border-blue-300 z-100',
-      logo: 'text-blue-700 text-xl font-bold',
+      logo: 'text-blue-700 text-xl font-bold flex flex-row space-x-6 items-center',
+    logoText: 'text-xl font-bold text-blue-700',
       navLinks: 'flex space-x-4',
       link: 'text-md mt-2 px-1 font-normal text-gray-700 hover:text-gray-400 transition duration-300 ease-in-out',
       button: "bg-blue-800 text-gray-50 px-4 py-2 rounded-md hover:bg-blue-700 transition duration-300 ease-in-out",
+      logoImg: 'h-[50px] w-[50px] object-center object-cover rounded-lg shadow-lg',
     },
     footer: {
         container: 'w-full bg-blue-800 p-4 border-t border-blue-300',
@@ -34,7 +36,7 @@ const styles = {
         subcontainer: 'absolute z-10 w-fit flex flex-col items-center justify-center w-full max-w-2xl mx-auto text-center px-8 rounded-lg shadow-lg',
         subshade: 'w-full h-full absolute inset-0 bg-gradient-to-r from-gray-200 via-gray-800 to-gray-200 opacity-50 z-1 rounded-lg',
         content: 'relative z-10 flex flex-col items-center justify-center w-full max-w-2xl mx-auto text-center p-8 rounded-lg',
-        title: 'text-4xl font-bold text-gray-100',
+        title: 'text-4xl font-bold bg-gradient-to-r from-blue-500 to-gray-100 bg-clip-text text-transparent',
         img: 'w-full h-[540px] object-center object-cover z--1',
         description: 'mt-4 text-lg text-gray-200',
         text: 'text-center text-gray-700',
@@ -54,7 +56,7 @@ const styles = {
     about: {
         container: 'w-full bg-gray-100 p-8',
         title: 'text-3xl font-bold text-center text-blue-800 mb-8',
-        subcontainer: 'flex flex-col md:flex-row items-center justify-center space-x-4',
+        subcontainer: 'flex flex-col md:flex-row items-center justify-center space-x-4 px-10',
         img: 'w-full h-[340px] object-center object-cover rounded-lg shadow-lg',
         content: 'flex flex-col items-start justify-start w-full max-w-2xl mx-auto text-left p-8 rounded-lg shadow-lg',
         description: 'mt-4 text-lg text-gray-600',
@@ -62,7 +64,7 @@ const styles = {
     aboutme: {
         container: 'w-full my-20 bg-white p-8',
         title: 'text-3xl font-bold text-center text-gray-800 mb-8',
-        subcontainer: 'flex flex-col md:flex-row items-center justify-center space-x-4',
+        subcontainer: 'flex flex-col md:flex-row items-center justify-center space-x-4 px-10',
         img: 'w-[400px] h-auto object-center object-cover rounded-lg shadow-lg',
         content: 'flex flex-col items-start justify-start w-full max-w-2xl mx-auto text-left p-8 rounded-lg shadow-lg',
         description: 'mt-4 text-lg text-gray-600',

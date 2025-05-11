@@ -10,16 +10,20 @@ export default function LifeInsuranceForm() {
     const [info, setInfo] = useState({
         name: '', email: '', state: '', dob: { month: '', day: '', year: '' }, gender: '', smoke: '', health: '', term: '', amount: ''
     });
+    const [apiRes, setApiRes] = useState(null);
 
     const handleSubmit = (e) => {
         e.preventDefault();
         console.log(info);
-        fetch(`/api/quote`, {
+        fetch(`/api/life`, {
             method: 'POST',
             headers: {
                 'Content-Type': 'application/json'
             },
             body: JSON.stringify(info)
+        }).then((res) => {
+            setApiRes(res.status);
+            return res.json();
         })
     }
     
@@ -61,6 +65,7 @@ export default function LifeInsuranceForm() {
                 <DropdownButton list={amountOptions} />
             </div>
             <button className={styles.quoteForm.button}>Get Instant Quote</button>
+            {apiRes && <div className={styles.quoteForm.apiResponse}>{apiRes}</div>}
         </form>
     )
 }
