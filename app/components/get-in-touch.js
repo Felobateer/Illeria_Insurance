@@ -1,13 +1,20 @@
+"use client";
 import styles from "../styles";
 import ContactForm from "./contact-form";
+import { useRef } from "react";
+import { scrollImgAni } from "../animations";
+
 
 export default function GetInTouch() {
+    const imgRef = useRef(null);
+
+    scrollImgAni(imgRef, "right");
     return (
         <section className={styles.contact.container} id="contact">
                 <h1 className={styles.contact.title}>Get In Touch</h1>
             <div className={styles.contact.subcontainer}>
                 <div className={styles.contact.leftside}>
-                    <img src="/contact.jpg" alt="Contact Us" className={styles.contact.img} />
+                    <img ref={imgRef} src="/contact.jpg" alt="Contact Us" className={styles.contact.img} />
                 </div>
                 <div className={styles.contact.rightside}>
                     <div className={styles.contact.rightside}>

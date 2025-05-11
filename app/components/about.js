@@ -1,12 +1,21 @@
+'use client';
 import styles from "../styles";
+import { useRef } from "react";
+import { scrollImgAni } from "../animations";
 
 export default function About() {
+    const imgRef = useRef(null);
+    const picRef = useRef(null);
+
+    scrollImgAni(imgRef, "right");
+    scrollImgAni(picRef, "left");
+
     return (
         <article id="about">
         <section className={styles.about.container}>
             <h2 className={styles.about.title}> Why Choose Lighthouse Financial Services? </h2>
             <div className={styles.about.subcontainer}>
-            <img src='/about.png' alt="About Us Image" className={styles.about.img} />
+            <img ref={imgRef} src='/about.png' alt="About Us Image" className={styles.about.img} />
                     <p className={styles.about.description}>
                     There are a lot of insurance agents out there and it may seem like any agent or broker is as good as another. But we are decidedly different. <br />
 
@@ -23,7 +32,7 @@ We promise to focus our attention on your benefit exclusively. Please don't hesi
                     <p className={styles.about.description}>
                     I have been in the insurance industry for 14 years focusingprimarily in the Senior Market. I started this journey as an insurance agent (sitting around kitchen tables talking about Medicare, and life insurance) I began with NYL, andthen I realized the market needed to have " Trusted Subject Matter Experts" that were unbiased, could oversee all the plans, and do the best for theSenior. Now we could finally advocate and offer the 13K seniors turning 65daily a plethora of options to find the right health plan & drug plan.We also assisted with all state and federal programs to help lower their <span className={styles.aboutme.highlight}>RX costs</span>. With the passage of the Affordable Care Act their was a paradigm shiftin the way employers offer coverage with a push towards preventive medicine& reduced hospital admissions. We are working with physicians and hospitalsto help improve the patient outcomes. We now have a shift from FFS to valuebased care. With the Social Determinants of Health now being recognized asmajor contributors in healthcare costs / outcomes we are collaborating withMeals on Wheels, Taub Foundation & others to “ Share One Voice “ to addressthese issues. 
                     </p>
-            <img src='/aboutme.png' alt="About Me Image" className={styles.about.img} />
+            <img ref={picRef} src='/aboutme.png' alt="About Me Image" className={styles.about.img} />
             </div>
             
         </section>
