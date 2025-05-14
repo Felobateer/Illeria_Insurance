@@ -1,3 +1,13 @@
+export const lang = [
+        {id: 0, name: 'EN'},
+        {id: 1, name: 'ES'},
+        {id: 2, name: 'AR'},
+        {id: 3, name: 'HI'},
+        {id: 4, name: 'UR'},
+        {id: 5, name: 'GU'},
+        {id: 6, name: 'PA'},
+    ]
+
 export const quotes = [
         { id: 0, name: "Life Insurance" },
         { id: 1, name: "Health Insurance" },

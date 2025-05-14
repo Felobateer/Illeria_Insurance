@@ -7,21 +7,19 @@ import DropdownMenu from "./dropdown-menu";
 import CustomModal from "./modal";
 import QuoteForm from "./quote-form";
 import MobileMenu from "./mobile-menu";
-
+import { lang } from "../constants"
+import { LanguageService } from "../api/languages";
 
 export default function Navbar() {
     const navigate = useRouter();
     const [showQuotes, setShowQuotes] = useState(false);
 
-    const lang = [
-        {id: 0, name: 'EN'},
-        {id: 1, name: 'ES'},
-        {id: 2, name: 'AR'},
-        {id: 3, name: 'HI'},
-        {id: 4, name: 'UR'},
-        {id: 5, name: 'GU'},
-        {id: 6, name: 'PA'},
-    ]
+    function handleLanguageChange(lang) {
+        const languageService = new LanguageService(process.env.NEXT_PUBLIC_GOOGLE_API_KEY);
+        languageService.setLanguage(lang);
+        console.log(`Language changed to: ${lang}`);
+        console.log("language in class: ", languageService.lang);
+    }
 
     return (
         <nav className={styles.navbar.container}>
@@ -46,7 +44,7 @@ export default function Navbar() {
                         <button className={styles.navbar.button} onClick={() => {setShowQuotes(!showQuotes); console.log(showQuotes)}}>
                             Free Quotes
                         </button></li>
-                    <DropdownMenu list={lang} />
+                    <DropdownMenu list={lang} onSelect={(select) => handleLanguageChange(select)} />
                 </ul>
 
                 <CustomModal isOpen={showQuotes} onClose={() => setShowQuotes(false)}>
