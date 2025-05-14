@@ -6,6 +6,7 @@ import { useEffect, useState } from "react"
 import DropdownMenu from "./dropdown-menu";
 import CustomModal from "./modal";
 import QuoteForm from "./quote-form";
+import MobileMenu from "./mobile-menu";
 
 
 export default function Navbar() {
@@ -51,6 +52,7 @@ export default function Navbar() {
                 <CustomModal isOpen={showQuotes} onClose={() => setShowQuotes(false)}>
                         <QuoteForm />
                 </CustomModal>
+                <MobileMenu lang={lang} />
         </nav>
     )
 }

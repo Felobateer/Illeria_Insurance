@@ -28,7 +28,7 @@ We promise to focus our attention on your benefit exclusively. Please don't hesi
 
         <section className={styles.aboutme.container}>
             <h2 className={styles.about.title}> Who Am I? </h2>
-            <div className={styles.about.subcontainer}>
+            <div className={styles.aboutme.subcontainer}>
                     <p className={styles.about.description}>
                     I have been in the insurance industry for 14 years focusingprimarily in the Senior Market. I started this journey as an insurance agent (sitting around kitchen tables talking about Medicare, and life insurance) I began with NYL, andthen I realized the market needed to have " Trusted Subject Matter Experts" that were unbiased, could oversee all the plans, and do the best for theSenior. Now we could finally advocate and offer the 13K seniors turning 65daily a plethora of options to find the right health plan & drug plan.We also assisted with all state and federal programs to help lower their <span className={styles.aboutme.highlight}>RX costs</span>. With the passage of the Affordable Care Act their was a paradigm shiftin the way employers offer coverage with a push towards preventive medicine& reduced hospital admissions. We are working with physicians and hospitalsto help improve the patient outcomes. We now have a shift from FFS to valuebased care. With the Social Determinants of Health now being recognized asmajor contributors in healthcare costs / outcomes we are collaborating withMeals on Wheels, Taub Foundation & others to “ Share One Voice “ to addressthese issues. 
                     </p>

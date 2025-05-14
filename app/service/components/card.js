@@ -6,7 +6,7 @@ import { scrollImgAni } from "@/app/animations";
 export default function ServiceCard({service, flexDirection}) {
     const imgRef = useRef(null);
 
-    scrollImgAni(imgRef, flexDirection === "row" ? "left" : "right");
+    scrollImgAni(imgRef, flexDirection === "flex-row" ? "left" : "right");
     
     return (
         <div className={`${styles.card.container} ${flexDirection}`} id={service.idName}>
