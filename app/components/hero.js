@@ -14,7 +14,11 @@ export default function Hero() {
           Licensed Representative in the following states: AZ, CA. DE, FL, LA, NJ, NY, PA &TX.
         </p>
         <button className={styles.hero.button}>
-          <i className="fas fa-download"></i> Complete Guide to Securing Your Retirement - Free eBook
+          <img src="/download-solid.svg" alt="" className={styles.hero.icon} />
+           Complete Guide to Securing Your Retirement - Free eBook
+        </button>
+        <button className={styles.hero.button}>
+          Book a Consultation session
         </button>
         </div>
       </div>

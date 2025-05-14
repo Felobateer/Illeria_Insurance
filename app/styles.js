@@ -28,7 +28,7 @@ const styles = {
         text: 'text-gray-100 text-sm',
         socialIcons: 'flex flex-row space-x-4',
         icon: 'text-gray-100 hover:text-gray-400 transition duration-300 ease-in-out',
-        policyContent: 'mt-[73px] px-40 flex flex-col flex-1 justify-center overflow-y-auto',
+        policyContent: 'mt-[73px] pt-[73px] md:pt-0 px-3 md:px-40 flex flex-col flex-1 justify-center overflow-y-auto',
         title: 'text-3xl font-bold text-center text-blue-800 mb-8',
         description: 'mt-4 text-lg text-start text-gray-600 leading-7',
         button: "bg-blue-800 text-gray-50 px-4 py-2 rounded-md hover:bg-blue-700 transition duration-300 ease-in-out",
@@ -54,6 +54,7 @@ const styles = {
         subtext: 'text-center text-gray-600',
         subtitle: 'mt-2 text-lg text-gray-00',
         button: 'mt-4 bg-blue-800 w-[260px] text-white px-4 py-2 rounded-md hover:bg-gray-700 transition duration-300 ease-in-out',
+        icon: 'h-4 w-4 text-gray-200 inline-block mr-2 fill-gray-200',
     },
     service: {
         container: 'w-full bg-white p-8',
