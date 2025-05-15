@@ -1,3 +1,23 @@
+export const services = [
+        {
+            link: '/service#life',
+            title: 'Life Insurance',
+            description: 'Protect your loved ones with our comprehensive life insurance plans.'
+        }, {
+            link: '/service#health',
+            title: 'Health Insurance',
+            description: 'Protect your health with our affordable health insurance options.'
+        }, {
+            link: '/service#final-expense',
+            title: 'Final Expense Insurance',
+            description: 'Protect your family from unexpected expenses with our final expense insurance.'
+        }, {
+            link: '/service#medicare',
+            title: 'Medicare Insurance',
+            description: "Medicare by itself has a high deductible for hospital  admission for 2024 it's $1,676, and Part B $257 calender year and it only pays 80% of eligible doctor costs."
+        }
+    ];
+
 export const lang = [
         {id: 0, name: 'EN'},
         {id: 1, name: 'ES'},
