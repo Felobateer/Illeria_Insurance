@@ -1,6 +1,11 @@
 import styles from "../styles";
+import { LanguageService } from "../admin/translator";
 
-export default function Hero() {
+export default async function Hero() {
+  const langService = new LanguageService;
+  const sourceText = await langService.getTranslatedContent();
+  const content = sourceText.hero;
+
 
     return (
         <section className={styles.hero.container}>
@@ -9,16 +14,12 @@ export default function Hero() {
       <div className={styles.hero.subcontainer}>
         <div className={styles.hero.subshade}></div>
         <div className={styles.hero.content}>
-        <h1 className={styles.hero.title}>Wagdy Saadalla</h1>
+        <h1 className={styles.hero.title}>{content.title}</h1>
         <p className={styles.hero.description}>
-          Licensed Representative in the following states: AZ, CA. DE, FL, LA, NJ, NY, PA &TX.
+          {content.subtitle}
         </p>
         <button className={styles.hero.button}>
-          <img src="/download-solid.svg" alt="" className={styles.hero.icon} />
-           Complete Guide to Securing Your Retirement - Free eBook
-        </button>
-        <button className={styles.hero.button}>
-          Book a Consultation session
+          {content.button}
         </button>
         </div>
       </div>

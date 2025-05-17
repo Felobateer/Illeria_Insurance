@@ -8,16 +8,18 @@ import CustomModal from "./modal";
 import QuoteForm from "./quote-form";
 import MobileMenu from "./mobile-menu";
 import { lang } from "../constants"
-import { LanguageService } from "../api/languages";
+import { LanguageService } from "../admin/translator";
 
 export default function Navbar() {
     const navigate = useRouter();
     const [showQuotes, setShowQuotes] = useState(false);
-
-    function handleLanguageChange(lang) {
-        const languageService = new LanguageService(process.env.NEXT_PUBLIC_GOOGLE_API_KEY);
-        languageService.setLanguage(lang);
-        console.log(`Language changed to: ${lang}`);
+    
+    async function handleLanguageChange(lang) {
+        const select = lang.name.toLowerCase().trim();
+        console.log("language in function: ", select);
+        const languageService = new LanguageService();
+        await languageService.setLanguage(select);
+        console.log(`Language changed to: ${lang.name}`);
         console.log("language in class: ", languageService.lang);
     }
 

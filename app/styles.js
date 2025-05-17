@@ -149,6 +149,19 @@ const styles = {
         title: 'text-2xl md:text-3xl font-bold text-start text-blue-800 mb-8',
         description: 'mt-4 text-md md:text-lg text-gray-800',
         subcontainer: 'absolute z-10 w-fit flex flex-col items-center justify-center w-full max-w-2xl mx-auto text-center px-8 rounded-lg',
+    },
+    admin: {
+        container: 'w-full bg-white p-8',
+        title: 'text-3xl font-bold text-center text-blue-800 mb-8',
+        formContainer: 'flex flex-col md:flex-col border-b border-gray-200 items-center justify-center space-x-4 px-3 md:px-10',
+        formTitle: 'text-xl font-semibold text-blue-800 mb-4',
+        form: 'flex flex-col bg-white rounded-lg p-6 m-4 w-full max-w-2xl',
+        formGroup: 'mb-4',
+        label: 'block text-gray-700 text-sm font-bold mb-2',
+        input: 'border border-gray-300 rounded-md p-2 w-full',
+        button: 'bg-blue-800 text-white px-4 py-2 rounded-md hover:bg-gray-700 transition duration-300 ease-in-out w-[100px] right-0',
+        formFooter: 'flex flex-row justify-between items-center mt-4',
+        formFooterText: 'text-gray-700 text-sm font-bold mb-2',
     }
   }
   

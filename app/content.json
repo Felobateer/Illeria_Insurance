@@ -1,0 +1,33 @@
+{
+  "hero": {
+    "title": "Wagdy Saadalla",
+    "subtitle": "Senior health care advisor and member with NABIP Central Chapter",
+    "button": "Book free session",
+    "name": "Wagdy Saadalla",
+    "Button": "Book free session"
+  },
+  "service-row": {
+    "title": "Our Services",
+    "types": [
+      {
+        "title": "life insurance",
+        "description": ""
+      },
+      {
+        "title": "health insurance",
+        "description": ""
+      },
+      {
+        "title": "Final expense insurance",
+        "description": ""
+      },
+      {
+        "title": "Medicare insurance",
+        "description": ""
+      }
+    ]
+  },
+  "about": {
+    "title": ""
+  }
+}
