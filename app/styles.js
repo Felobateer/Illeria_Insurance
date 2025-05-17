@@ -4,7 +4,7 @@ const styles = {
     },
     navbar: {
       container: 'fixed w-full max-w-[1440px] bg-white flex justify-between items-center leading-normal py-4 px-3 md:px-12 border-b border-blue-300 z-100',
-      logo: 'text-blue-700 text-xl font-bold flex flex-row space-x-6 items-center',
+      logo: 'text-blue-700 text-xl font-bold flex flex-row space-x-6 items-center cursor-pointer',
     logoText: 'text-xl font-bold text-blue-700',
       navLinks: 'hidden md:flex space-x-4',
       link: 'text-md mt-2 px-1 font-normal text-gray-700 hover:text-gray-400 transition duration-300 ease-in-out',

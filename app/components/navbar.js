@@ -25,7 +25,7 @@ export default function Navbar() {
 
     return (
         <nav className={styles.navbar.container}>
-                <div className={styles.navbar.logo}>
+                <div className={styles.navbar.logo} onClick={() => navigate.push('/')}>
                     <img src="/logo.jpg" alt="Logo" className={styles.navbar.logoImg} />
                     <p className={styles.navbar.logoText}>Lighthouse Financial Services</p>
                 </div>

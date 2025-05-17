@@ -1,5 +1,7 @@
 import content from '../content.json';
 
+const baseUrl = process.env.NEXT_PUBLIC_BASE_URL || 'http://localhost:3000';
+
 export class LanguageService {
   constructor(defaultLang = "en") {
     this.lang = defaultLang;
@@ -11,36 +13,40 @@ export class LanguageService {
   }
 
   async translate(text, targetLang) {
-    const lang = targetLang || this.lang;
-    if (lang === "en" || !text) return text;
+    const res = await fetch(`https://lingva.ml/api/v1/${targetLang}/${text}`);
 
-    const res = await fetch('https://libretranslate.de/translate', {
-      method: 'POST',
-      headers: { 'Content-Type': 'application/json' },
-      body: JSON.stringify({
-        q: text,
-        source: 'en',
-        target: lang,
-        format: 'text',
-      }),
-    });
+    if (!res.ok) throw new Error("Translation API error");
 
     const data = await res.json();
-    return data.translatedText;
+    return data.translated;
   }
 
   async translateObject(obj, lang) {
     const result = {};
     for (const key in obj) {
       const val = obj[key];
-      result[key] = typeof val === "object"
-        ? await this.translateObject(val, lang)
-        : await this.translate(val, lang);
+      if (typeof val === 'object') {
+          result[key] = await this.translateObject(val, lang);
+        } else {
+            try {
+            console.log('text to be translated:', val);
+            result[key] = await this.translate(val, lang);
+        } catch (err) {
+          console.warn(`Failed to translate "${val}", using fallback.`);
+          result[key] = val;
+        }
+      }
     }
     return result;
   }
 
   async getTranslatedContent() {
-    return await this.translateObject(content, this.lang);
+    try {
+      return await this.translateObject(content, this.lang);
+    } catch (error) {
+      console.error("Translation failed entirely, falling back to English:", error);
+      return content;
+    }
   }
 }
+
