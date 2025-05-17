@@ -13,6 +13,7 @@ export class LanguageService {
   }
 
   async translate(text, targetLang) {
+    if (targetLang === 'en') return text;
     const res = await fetch(`https://lingva.ml/api/v1/${targetLang}/${text}`);
 
     if (!res.ok) throw new Error("Translation API error");
@@ -29,7 +30,6 @@ export class LanguageService {
           result[key] = await this.translateObject(val, lang);
         } else {
             try {
-            console.log('text to be translated:', val);
             result[key] = await this.translate(val, lang);
         } catch (err) {
           console.warn(`Failed to translate "${val}", using fallback.`);
@@ -41,6 +41,8 @@ export class LanguageService {
   }
 
   async getTranslatedContent() {
+    if (this.lang === 'en') return content;
+    
     try {
       return await this.translateObject(content, this.lang);
     } catch (error) {

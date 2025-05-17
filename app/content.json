@@ -6,28 +6,124 @@
     "name": "Wagdy Saadalla",
     "Button": "Book free session"
   },
-  "service-row": {
-    "title": "Our Services",
+  "serviceRow": {
+    "title": "Our Insurance Services",
     "types": [
       {
         "title": "life insurance",
-        "description": ""
+        "description": "Protect your loved ones with our comprehensive life insurance plans.",
+        "FullDescription": "Life insurance is a contract between an insurance policyholder and an insurer or assurer, where the insurer provides a monetary benefit to the policyholder's beneficiaries upon the death of the insured person."
       },
       {
         "title": "health insurance",
-        "description": ""
+        "description": "Protect your health with our affordable health insurance options.",
+        "FullDescription": "Health insurance is a type of insurance coverage that pays for medical and surgical expenses incurred by the insured. It can also provide coverage for other types of health-related expenses, such as preventive care, prescription drugs, and mental health services."
       },
       {
         "title": "Final expense insurance",
-        "description": ""
+        "description": "Protect your family from unexpected expenses with our final expense insurance.",
+        "FullDescription": "Your family will always come first. You wouldn't want them to bear huge and unexpected financial burdens at the time of your passing. No matter what your age, it's absolutely essential to have a plan in place to protect your loved ones when you are no longer able. Final Expense insurance will pay for your funeral service, bills and other associated costs."
       },
       {
         "title": "Medicare insurance",
-        "description": ""
+        "description": "Medicare by itself has a high deductible for hospital  admission for 2024 it's $1,676, and Part B $257 calender year and it only pays 80% of eligible doctor costs.",
+        "FullDescription": "Medicare by itself has a high deductible for hospital admission for 2024 it's $1,632, and Part B $240 and it only pays 80% of eligible doctor costs. A serious illness could set you back many thousands of dollars. A Medicare Supplement or Medicare Advantage policy covers all or most out-of-pocket medical expenses providing you with peace-of-mind and potential savings. Let us guide you in sorting through the numerous Medicare options. We can also help you in choosing a Medicare prescription plan Part D that includes your specific medications."
+      },
+      {
+        "title": "Fast Auto Insurance",
+        "description": "",
+        "FullDescription": ""
+      },
+      {
+        "title": "Annuity"
+      },
+      {
+        "title": "more choices"
       }
     ]
   },
   "about": {
-    "title": ""
+    "title": "Why Choose Lighthouse Financial Services?",
+    "description": [
+      "There are a lot of insurance agents out there and it may seem like any agent or broker is as good as another. But we are decidedly different.",
+      "Let's face it, insurance jargon can be very confusing. We know the ins and outs of the insurance business, and our inside knowledge of many companies and many products will work to your advantage. In fact, different insurance companies often charge vastly different premiums for the exact same coverage. As independent agents we are not employed by one particular company. Instead, we can select insurance products from among those companies that best address your unique concerns.",
+      "We promise to focus our attention on your benefit exclusively. Please don't hesitate to call us with your questions no matter whether you are already a valued customer, a potential client or if you simply need expert advice. There will never be a charge for our assistance or for a friendly, no-obligation chat."
+    ]
+  },
+  "aboutme": {
+    "title": "Who am I?",
+    "description": [
+      "I have been in the insurance industry for 14 years focusingprimarily in the Senior Market. I started this journey as an insurance agent (sitting around kitchen tables talking about Medicare, and life insurance) I began with NYL, andthen I realized the market needed to have ' Trusted Subject Matter Experts ' that were unbiased, could oversee all the plans, and do the best for theSenior. Now we could finally advocate and offer the 13K seniors turning 65daily a plethora of options to find the right health plan & drug plan.We also assisted with all state and federal programs to help lower their ",
+      " . With the passage of the Affordable Care Act their was a paradigm shiftin the way employers offer coverage with a push towards preventive medicine& reduced hospital admissions. We are working with physicians and hospitalsto help improve the patient outcomes. We now have a shift from FFS to valuebased care. With the Social Determinants of Health now being recognized asmajor contributors in healthcare costs / outcomes we are collaborating withMeals on Wheels, Taub Foundation & others to “ Share One Voice “ to addressthese issues. The lighthouse Financial Service  prides themselves asvisionaries who can provide education & solutions for these complex changesin healthcare. "
+    ],
+    "span": "RX costs"
+  },
+  "contact": {
+    "title": "Get In Touch",
+    "subtitle": [
+      "Contact Information",
+      "Agency Hours",
+      "Contact Us Today"
+    ],
+    "office-number": "office: 201-218-2688",
+    "cell-number": "cell: 201-218-2688",
+    "email": "",
+    "weekdays": "weekdays: 9:00 AM - 5:00 PM",
+    "weekends": "Weekends: closed",
+    "button": "Send Message"
+  },
+  "insurersJoin": {
+    "title": [
+      "We're Proud to represent insurers such as: ",
+      "Ready to get started?"
+    ],
+    "description": "Fill out our quick form to get a personalized insurance quote today.",
+    "button": "Submit"
+  },
+  "forms": {
+    "namePlaceholder": "Your Name",
+    "emailPlaceholder": "Your Email",
+    "messagePlaceholder": "Your Message",
+    "phonePlaceholder": "Phone Number"
+  },
+  "servicePage": {
+    "title": "Competition = Lower Costs",
+    "description": [
+      "The insurance industry includes hundreds of different companies hoping to earn your business. It is a very competitive market and it pays to shop around for the very best deals. This is where we come in.",
+      "Whether you're searching for Life Insurance, Annuities, IRA's and other retirement strategies, Health Insurance or 'ObamaCare' or Medicare, you must be well-informed and well-advised to get the most out of your premium dollars. An experienced and independent agent who represents multiple insurance carriers can make a huge difference in what you pay for coverage.",
+      "Please don't hesitate to call us with your questions no matter whether you are already a valued customer, a potential client or if you simply need expert advice. There will never be a charge for our assistance or for a friendly, no-obligation chat."
+    ],
+    "extras": {
+      "mainSectionTitle": "Indicidual and Group Health Insurance the ACA.",
+      "mainSectionDescription": "Nearly everybody is confused about their healthcare options - and rightly so. You can't rely on politicians or media reports for a clear and unbiased explanation. You want the facts, not opinions. We'd be happy to evaluate your current coverage and present you with side-by side comparisons of alternatives.",
+      "disclamerTitle": "Disclamer",
+      "disclamerDescription": "“We do not offer every planavailable in your area . Currently, we represent 10 organization, which offer39 products in your area. You can always contact Medicare.GOV, 1-800-Medicare,or your local State health insurance program (SHIP) to get information on allof your options.”"
+    }
+  },
+  "privacy-policy": {
+    "title": "Privacy Policy",
+    "description": [
+      "Wagdy Saadalla is determined to protect the information that you provide. When you volunteer your information, it is stored on a secure server which is only accessed by a select group of Wagdy Saadalla employees.",
+      "This information is used solely for assessing customer requirements for insurance purposes, updating existing policies, or to apply requisite information to an application.",
+      "Wagdy Saadalla will also inactively collect non-identifiable personal data which is used for the purpose of improving the customer usability and overall quality of our website.",
+      "Once you enter your details and submit the Wagdy Saadalla form, you thereby agree to the terms of this privacy policy. If you don’t agree to any of these terms, please do not submit your details to Wagdy Saadalla or use this website.",
+      "Wagdy Saadalla will reserve the right to make changes to this privacy policy as required. It is up to the client to regularly refer to this page and check for alterations or modifications in order to familiarize themselves with Wagdy Saadalla current practices. Wagdy Saadalla will always state policy changes on this page. The laws of the state of NJ and the United States of America govern any legal obligation under this privacy policy, regardless of where the user is at the time of viewing this website.",
+      "Please remember that it is essential when purchasing a policy from Wagdy Saadalla that your details should be given to the insurance company, so that they may start the proceedings with the service.",
+      "It is possible that Wagdy Saadalla will use third party services when completing your order or for the purpose of validating your application. This is solely in order to provide you with this service and is essential to your application.",
+      "These third parties are prohibited by law from sharing your personal information or using it to promote or market their own business."
+    ],
+    "links": [
+      "Web Directory",
+      "New Directory",
+      "Website Design Directory"
+    ]
+  },
+  "footer": {
+    "description": "copyright © 2025 Wagdy Saadalla (David). All rights reserved.",
+    "links": [
+      "Member Login",
+      "Privacy Policy",
+      "Contact"
+    ]
   }
 }

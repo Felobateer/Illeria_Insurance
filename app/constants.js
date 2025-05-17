@@ -1,23 +1,26 @@
+import content from './content.json';
+
 export const services = [
         {
             link: '/service#life',
-            title: 'Life Insurance',
-            description: 'Protect your loved ones with our comprehensive life insurance plans.'
-        }, {
+            title: content.serviceRow.types[0].title,
+            description: content.serviceRow.types[0].description
+        }, 
+        {
             link: '/service#health',
-            title: 'Health Insurance',
-            description: 'Protect your health with our affordable health insurance options.'
+            title: content.serviceRow.types[1].title,
+            description: content.serviceRow.types[1].description
         }, {
             link: '/service#final-expense',
-            title: 'Final Expense Insurance',
-            description: 'Protect your family from unexpected expenses with our final expense insurance.'
+            title: content.serviceRow.types[2].title,
+            description: content.serviceRow.types[2].description
         }, {
             link: '/service#medicare',
-            title: 'Medicare Insurance',
-            description: "Medicare by itself has a high deductible for hospital  admission for 2024 it's $1,676, and Part B $257 calender year and it only pays 80% of eligible doctor costs."
+            title: content.serviceRow.types[3].title,
+            description: content.serviceRow.types[3].description
         }
     ];
-
+ 
 export const lang = [
         {id: 0, name: 'EN'},
         {id: 1, name: 'ES'},
@@ -29,11 +32,13 @@ export const lang = [
     ]
 
 export const quotes = [
-        { id: 0, name: "Life Insurance" },
-        { id: 1, name: "Health Insurance" },
-        { id: 2, name: "Final Expense Insurance" },
-        { id: 3, name: "Medicare Supplement" },
-        { id: 4, name: "Fast Auto Insurance" },
+        { id: 0, name: content.serviceRow.types[0].title },
+        { id: 1, name: content.serviceRow.types[1].title  },
+        { id: 2, name: content.serviceRow.types[2].title },
+        { id: 3, name: content.serviceRow.types[3].title  },
+        { id: 4, name: content.serviceRow.types[4].title  },
+        { id: 5, name: content.serviceRow.types[5].title },
+        { id: 6, name: content.serviceRow.types[6].title }
     ];
 
 export const us_states = [

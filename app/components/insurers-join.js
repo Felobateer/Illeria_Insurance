@@ -1,15 +1,27 @@
 'use client';
 import Image from "next/image";
 import styles from "../styles";
-import { use, useEffect, useRef } from "react";
+import { useState, useEffect, useRef } from "react";
 import gsap from 'gsap';
 import { useGSAP } from "@gsap/react";
 import HorizontalScroll from "./carousel";
 import DropdownMenu from "./dropdown-menu";
-
+import { LanguageService } from "../admin/translator";
 
 export default function InsurersAndJoin() {
     gsap.registerPlugin(useGSAP);
+    const [insurNjoin, setInsurNjoin] = useState(null);
+    const [formContent, setFormContent] = useState(null);
+
+    useEffect(() => {
+        async function fetchContent() {
+            const langService = new LanguageService;
+            const sourceText = await langService.getTranslatedContent();
+            setInsurNjoin(sourceText.insurersJoin);
+            setFormContent(sourceText.forms);
+        }
+        fetchContent();
+    }, []);
     
     const insurers = [
         { id: 0, logo: "/oxford-life.jpg"},
@@ -29,29 +41,33 @@ export default function InsurersAndJoin() {
         { id: 3, name: 'Medicare Supplement' },
     ]
 
+    if(!insurNjoin || !formContent) {
+        return <p>Loading...</p>
+    }
+
     return (
         <div className={styles.insurers.container}>
-            <h1 className={styles.insurers.title}>We're proud to represent insurers such as:</h1>
+            <h1 className={styles.insurers.title}>{insurNjoin.title[0]}</h1>
             <div className={styles.insurers.subcontainer} ref={containerRef}>
             
             <HorizontalScroll insurers={insurers} />
             </div>
            <div className={styles.joinUs.container}>
                 <h2 className={styles.joinUs.title}>
-                    Ready to get started?
+                    {insurNjoin.title[1]}
                 </h2>
-                <p className={styles.joinUs.description}>Fill out our quick form to get a personalized insurance quote today.</p>
+                <p className={styles.joinUs.description}>{insurNjoin.description}</p>
 
                 <form className={styles.form.container}>
                     <div className={styles.form.subcontainer}>
                         <div className={styles.form.leftside}>
-                            <input type="text" placeholder="Full Name" className={styles.form.input} />
-                            <input type="email" placeholder="Email" className={styles.form.input} />
-                            <input type="tel" placeholder="Phone Number" className={styles.form.input} />
+                            <input type="text" placeholder={formContent.namePlaceholder} className={styles.form.input} />
+                            <input type="email" placeholder={formContent.emailPlaceholder} className={styles.form.input} />
+                            <input type="tel" placeholder={formContent.messagePlaceholder} className={styles.form.input} />
                             <DropdownMenu list={insurances} />
                         </div>
                         <div className={styles.form.rightside}>
-                            <button type="submit" className={styles.form.button}>Submit</button>
+                            <button type="submit" className={styles.form.button}>{insurNjoin.button}</button>
                         </div>
                     </div>
                 </form>

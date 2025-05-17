@@ -1,29 +1,45 @@
 "use client";
 import styles from "../styles";
 import ContactForm from "./contact-form";
-import { useRef } from "react";
+import { useRef, useEffect, useState } from "react";
 import { scrollImgAni } from "../animations";
+import { LanguageService } from "../admin/translator";
 
 
 export default function GetInTouch() {
     const imgRef = useRef(null);
+    const [contactContent, setContactContent] = useState(null); 
 
-    scrollImgAni(imgRef, "right");
+    
+    useEffect(() => {
+        async function fetchContent() {
+            const langService = new LanguageService;
+            const sourceText = await langService.getTranslatedContent();
+            setContactContent(sourceText.contact);
+        }
+        fetchContent();
+        scrollImgAni(imgRef, "right");
+    }, []);
+
+    if(!contactContent) {
+        return <p>Loading...</p>
+    }
+    
     return (
         <section className={styles.contact.container} id="contact">
-                <h1 className={styles.contact.title}>Get In Touch</h1>
+                <h1 className={styles.contact.title}>{contactContent.title}</h1>
             <div className={styles.contact.subcontainer}>
                 <div className={styles.contact.leftside}>
                     <img ref={imgRef} src="/contact.jpg" alt="Contact Us" className={styles.contact.img} />
                 </div>
                 <div className={styles.contact.rightside}>
                     <div className={styles.contact.rightside}>
-                        <h2 className={styles.contact.subtitle}>Contact Information</h2>
-                        <p className={styles.contact.text}>Office: 201-218-2688</p>
-                        <p className={styles.contact.text}>Cell: 201-218-2688</p>
-                        <h2 className={styles.contact.subtitle}>Agency Hours</h2>
-                        <p className={styles.contact.text}>Weekdays: 9:00 AM - 5:00 PM</p>
-                        <p className={styles.contact.text}>Weekends: closed</p>
+                        <h2 className={styles.contact.subtitle}>{contactContent.subtitle[0]}</h2>
+                        <p className={styles.contact.text}>{contactContent.office-number}</p>
+                        <p className={styles.contact.text}>{contactContent.cell-number}</p>
+                        <h2 className={styles.contact.subtitle}>{contactContent.subtitle[1]}</h2>
+                        <p className={styles.contact.text}>{contactContent.weekdays}</p>
+                        <p className={styles.contact.text}>{contactContent.weekends}</p>
                     </div>
                     <ContactForm />
                 </div>
