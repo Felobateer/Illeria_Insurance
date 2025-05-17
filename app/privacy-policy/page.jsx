@@ -1,28 +1,32 @@
 import styles from "../styles";
+import { LanguageService } from "../admin/translator";
 
-export default function PolicyPage() {
+export default async function PolicyPage() {
+    const langService = new LanguageService;
+    const sourceText = await langService.getTranslatedContent();
+    const content = sourceText.privacyPolicy;
     return (
         <div className={styles.footer.policyContent}>
-        <h2 className={styles.footer.title}>Privacy Policy</h2>
+        <h2 className={styles.footer.title}>{content.title}</h2>
         <p className={styles.footer.description}>
-        Wagdy Saadalla is determined to protect the information that you provide. When you volunteer your information, it is stored on a secure server which is only accessed by a select group of Wagdy Saadalla employees.
+        {content.description[0]}
         <br />
-        This information is used solely for assessing customer requirements for insurance purposes, updating existing policies, or to apply requisite information to an application.
+        {content.description[1]}
         <br />
-        Wagdy Saadalla will also inactively collect non-identifiable personal data which is used for the purpose of improving the customer usability and overall quality of our website.
+        {content.description[2]}
         <br />
-        Once you enter your details and submit the Wagdy Saadalla form, you thereby agree to the terms of this privacy policy. If you don’t agree to any of these terms, please do not submit your details to Wagdy Saadalla or use this website.
+        {content.description[3]}
         <br />
-        Wagdy Saadalla will reserve the right to make changes to this privacy policy as required. It is up to the client to regularly refer to this page and check for alterations or modifications in order to familiarize themselves with Wagdy Saadalla current practices. Wagdy Saadalla will always state policy changes on this page. The laws of the state of NJ and the United States of America govern any legal obligation under this privacy policy, regardless of where the user is at the time of viewing this website.
+        {content.description[4]}
         <br />
-        Please remember that it is essential when purchasing a policy from Wagdy Saadalla that your details should be given to the insurance company, so that they may start the proceedings with the service.
+        {content.description[5]}
         <br />
-        It is possible that Wagdy Saadalla will use third party services when completing your order or for the purpose of validating your application. This is solely in order to provide you with this service and is essential to your application.
+        {content.description[6]}
         <br />
-        These third parties are prohibited by law from sharing your personal information or using it to promote or market their own business.
-        <a href="https://www.inwebsitebuilder.com/directory" className={styles.aboutme.highlight}> Web Directory</a>, 
-        <a href="https://www.inwebsitebuilder.com/florida/directory" className={styles.aboutme.highlight}> New Directory</a>,
-        <a href="https://www.inwebsitebuilder.com/website/directory" className={styles.aboutme.highlight}> Website Design Directory</a>
+        {content.description[7]}
+        <a href="https://www.inwebsitebuilder.com/directory" className={styles.aboutme.highlight}> {content.links[0]}</a>, 
+        <a href="https://www.inwebsitebuilder.com/florida/directory" className={styles.aboutme.highlight}> {content.links[1]}</a>,
+        <a href="https://www.inwebsitebuilder.com/website/directory" className={styles.aboutme.highlight}> {content.links[2]}</a>
         </p>
     </div> 
     );
